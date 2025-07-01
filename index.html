@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dusun Blungkangan - Desa Bawukan</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dusun Blungkangan</h1>
+            <p>Desa Bawukan - Kabupaten Bantul</p>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn active" onclick="showSection('profil')">Profil Dusun</button>
+            <button class="nav-btn" onclick="showSection('peta')">Peta Dusun</button>
+            <button class="nav-btn" onclick="showSection('galeri')">Galeri Kegiatan</button>
+            <button class="nav-btn" onclick="showSection('kontak')">Kontak</button>
+        </div>
+
+        <div id="profil" class="section active">
+            <h2>Profil Dusun Blungkangan</h2>
+            <div class="profile-content">
+                <div class="profile-text">
+                    <p>Dusun Blungkangan merupakan salah satu dusun yang berada di wilayah Desa Bawukan, Kecamatan Sewon, Kabupaten Bantul, Daerah Istimewa Yogyakarta. Dusun ini memiliki karakteristik sebagai wilayah pedesaan yang masih mempertahankan nilai-nilai tradisional Jawa sambil beradaptasi dengan perkembangan zaman modern.</p>
+                    
+                    <p>Masyarakat Dusun Blungkangan dikenal dengan keramahan dan gotong royong yang kuat. Mayoritas penduduk bekerja sebagai petani, pedagang, dan ada juga yang bekerja di sektor formal maupun informal. Kehidupan sosial masyarakat sangat dinamis dengan berbagai kegiatan kemasyarakatan yang rutin dilaksanakan.</p>
+                    
+                    <p>Dusun ini memiliki potensi wisata alam dan budaya yang menarik, serta aksesibilitas yang baik karena lokasinya yang strategis. Infrastruktur dasar seperti jalan, listrik, dan air bersih sudah tersedia dengan baik untuk menunjang kehidupan masyarakat sehari-hari.</p>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">450</span>
+                        <span class="stat-label">Total KK</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1,250</span>
+                        <span class="stat-label">Total Penduduk</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5.2</span>
+                        <span class="stat-label">Luas (km²)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">RT/RW</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="peta" class="section">
+            <h2>Peta Dusun Blungkangan</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <img src="DESA KEMENDES.jpg" alt="peta_dusun_blungkangan">
+                </div>
+                <button class="download-btn" onclick="downloadMap()">
+                    📥 Download Peta (PDF)
+                </button>
+            </div>
+        </div>
+
+        <div id="galeri" class="section">
+            <h2>Galeri Kegiatan Dusun</h2>
+            <div class="carousel-container">
+                <div class="carousel" id="carousel">
+                    <!-- Di halaman utama, ubah carousel item menjadi clickable -->
+                    <div class="carousel-item" onclick="window.location.href='detail.html?id=gotong-royong'">
+                        <div class="carousel-content">
+                            <h3>Gotong Royong Pembersihan Lingkungan</h3>
+                            <p>Kegiatan rutin membersihkan lingkungan dusun yang dilakukan setiap bulan dengan partisipasi seluruh warga</p>
+                        </div>
+                    </div>
+                    <!-- Di halaman utama, ubah carousel item menjadi clickable -->
+                    <div class="carousel-item" onclick="window.location.href='detail.html?id=festival-budaya'">
+                        <div class="carousel-content">
+                            <h3>Festival Budaya Tahunan</h3>
+                            <p>Perayaan budaya tradisional yang menampilkan seni tari, musik gamelan, dan kuliner khas daerah</p>
+                        </div>
+                    </div>
+                    <!-- Di halaman utama, ubah carousel item menjadi clickable -->
+                    <div class="carousel-item" onclick="window.location.href='detail.html?id=pelatihan-keterampilan'">
+                        <div class="carousel-content">
+                            <h3>Pelatihan Keterampilan Warga</h3>
+                            <p>Program pemberdayaan masyarakat melalui pelatihan kerajinan tangan dan kewirausahaan</p>
+                        </div>
+                    </div>
+                    <!-- Di halaman utama, ubah carousel item menjadi clickable -->
+                    <div class="carousel-item" onclick="window.location.href='detail.html?id=posyandu'">
+                        <div class="carousel-content">
+                            <h3>Posyandu dan Kesehatan Masyarakat</h3>
+                            <p>Kegiatan pelayanan kesehatan rutin untuk ibu dan anak serta program imunisasi</p>
+                        </div>
+                    </div>
+                    <!-- Di halaman utama, ubah carousel item menjadi clickable -->
+                    <div class="carousel-item" onclick="window.location.href='detail.html?id=kemerdekaan'">
+                        <div class="carousel-content">
+                            <h3>Peringatan Hari Kemerdekaan</h3>
+                            <p>Berbagai lomba dan kegiatan dalam rangka memperingati HUT RI dengan meriah</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-controls prev" onclick="prevSlide()">❮</button>
+                <button class="carousel-controls next" onclick="nextSlide()">❯</button>
+            </div>
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+                <span class="indicator" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+
+        <div id="kontak" class="section">
+            <h2>Kontak Perangkat Desa</h2>
+            <div class="contacts-grid">
+                <div class="contact-card" onclick="openWhatsApp('081234567890', 'Kepala Desa Bawukan')">
+                    <h3>Kepala Desa Bawukan</h3>
+                    <p>Bapak Slamet Riyadi</p>
+                    <p>📞 081234567890</p>
+                    <button class="whatsapp-btn">💬 Chat WhatsApp</button>
+                </div>
+                
+                <div class="contact-card" onclick="openWhatsApp('081234567891', 'Sekretaris Desa')">
+                    <h3>Sekretaris Desa</h3>
+                    <p>Ibu Sri Wahyuni</p>
+                    <p>📞 081234567891</p>
+                    <button class="whatsapp-btn">💬 Chat WhatsApp</button>
+                </div>
+                
+                <div class="contact-card" onclick="openWhatsApp('081234567892', 'Kepala Dusun Blungkangan')">
+                    <h3>Kepala Dusun Blungkangan</h3>
+                    <p>Bapak Ahmad Wijaya</p>
+                    <p>📞 081234567892</p>
+                    <button class="whatsapp-btn">💬 Chat WhatsApp</button>
+                </div>
+                
+                <div class="contact-card" onclick="openWhatsApp('081234567893', 'RT 01')">
+                    <h3>Ketua RT 01</h3>
+                    <p>Bapak Bambang Sutrisno</p>
+                    <p>📞 081234567893</p>
+                    <button class="whatsapp-btn">💬 Chat WhatsApp</button>
+                </div>
+                
+                <div class="contact-card" onclick="openWhatsApp('081234567894', 'RT 02')">
+                    <h3>Ketua RT 02</h3>
+                    <p>Bapak Joko Prasetyo</p>
+                    <p>📞 081234567894</p>
+                    <button class="whatsapp-btn">💬 Chat WhatsApp</button>
+                </div>
+                
+                <div class="contact-card" onclick="openWhatsApp('081234567895', 'Karang Taruna')">
+                    <h3>Ketua Karang Taruna</h3>
+                    <p>Saudara Diki Firmansyah</p>
+                    <p>📞 081234567895</p>
+                    <button class="whatsapp-btn">💬 Chat WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked nav button
+            event.target.classList.add('active');
+        }
+
+        function updateCarousel() {
+            const carousel = document.getElementById('carousel');
+            carousel.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlideIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        function currentSlide(n) {
+            currentSlideIndex = n - 1;
+            updateCarousel();
+        }
+
+        // Metode 1: Download gambar peta yang ada di halaman sebagai PDF
+        function downloadMap() {
+            const mapImage = document.querySelector('.map-placeholder img');
+            
+            if (mapImage) {
+                // Buat canvas untuk convert image ke PDF
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Set ukuran canvas sama dengan gambar
+                canvas.width = mapImage.naturalWidth || mapImage.width;
+                canvas.height = mapImage.naturalHeight || mapImage.height;
+                
+                // Gambar image ke canvas
+                ctx.drawImage(mapImage, 0, 0);
+                
+                // Convert canvas ke blob
+                canvas.toBlob(function(blob) {
+                    // Buat URL download
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'peta_dusun_blungkangan.png';
+                    
+                    // Trigger download
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    
+                    // Cleanup URL
+                    URL.revokeObjectURL(url);
+                }, 'image/png');
+                
+            } else {
+                // Fallback jika gambar tidak ditemukan
+                downloadMapAsText();
+            }
+        }
+
+        function openWhatsApp(phoneNumber, name) {
+            const message = `Halo ${name}, saya ingin bertanya mengenai Dusun Blungkangan.`;
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Initialize carousel
+        updateCarousel();
+    </script>
+</body>
+</html>
