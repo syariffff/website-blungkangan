@@ -445,12 +445,13 @@
     <div class="container">
         <div class="header">
             <h1>Dusun Blungkangan</h1>
-            <p>Desa Bawukan - Kabupaten Klaten</p>
+            <p>Desa Bawukan - Kecamatan Kemalang - Kabupaten Klaten</p>
         </div>
 
         <div class="navigation">
             <button class="nav-btn active" onclick="showSection('profil')">Profil Dusun</button>
-            <button class="nav-btn" onclick="showSection('peta')">Peta Dusun</button>
+            <button class="nav-btn" onclick="showSection('peta dusun')">Peta Dusun</button>
+            <button class="nav-btn" onclick="showSection('peta tata guna')">Peta Tata Guna Lahan</button>
             <button class="nav-btn" onclick="showSection('galeri')">Galeri Kegiatan</button>
             <button class="nav-btn" onclick="showSection('kontak')">Kontak</button>
         </div>
@@ -459,25 +460,19 @@
             <h2>Profil Dusun Blungkangan</h2>
             <div class="profile-content">
                 <div class="profile-text">
-                    <p>Dusun Blungkangan merupakan salah satu dusun yang berada di wilayah Desa Bawukan, Kecamatan Sewon, Kabupaten Bantul, Daerah Istimewa Yogyakarta. Dusun ini memiliki karakteristik sebagai wilayah pedesaan yang masih mempertahankan nilai-nilai tradisional Jawa sambil beradaptasi dengan perkembangan zaman modern.</p>
-                    
-                    <p>Masyarakat Dusun Blungkangan dikenal dengan keramahan dan gotong royong yang kuat. Mayoritas penduduk bekerja sebagai petani, pedagang, dan ada juga yang bekerja di sektor formal maupun informal. Kehidupan sosial masyarakat sangat dinamis dengan berbagai kegiatan kemasyarakatan yang rutin dilaksanakan.</p>
-                    
-                    <p>Dusun ini memiliki potensi wisata alam dan budaya yang menarik, serta aksesibilitas yang baik karena lokasinya yang strategis. Infrastruktur dasar seperti jalan, listrik, dan air bersih sudah tersedia dengan baik untuk menunjang kehidupan masyarakat sehari-hari.</p>
+                    <p>Dusun Blungkangan merupakan salah satu dusun yang berada di wilayah Desa Bawukan, Kecamatan Kemalang, Kabupaten Klaten, Jawa Tengah. Dusun ini terletak di lereng Gunung Merapi dan memiliki karakteristik pedesaan yang asri dengan suasana alam yang sejuk. Meskipun berada di daerah perbukitan, masyarakatnya tetap menjunjung tinggi nilai-nilai tradisional Jawa serta terus beradaptasi dengan perkembangan zaman.</p>
+                    <br>
+                    <p>Dusun Blungkangan dikenal luas karena kekayaan budayanya, terutama kesenian Jathilan yang masih aktif dilestarikan dan sering ditampilkan dalam berbagai acara adat maupun hiburan masyarakat. Selain budaya, dusun ini juga memiliki potensi hasil bumi yang melimpah seperti kelapa, singkong, dan bambu, yang dimanfaatkan warga untuk kebutuhan sehari-hari maupun untuk kegiatan ekonomi lokal.</p>
                 </div>
                 
                 <div class="profile-stats">
                     <div class="stat-item">
-                        <span class="stat-number">-</span>
+                        <span class="stat-number">108</span>
                         <span class="stat-label">Total KK</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">-</span>
-                        <span class="stat-label">Total Penduduk</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">-</span>
-                        <span class="stat-label">Luas (km²)</span>
+                        <span class="stat-number">± 20.000</span>
+                        <span class="stat-label">Luas (m²)</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">2/1</span>
@@ -487,14 +482,26 @@
             </div>
         </div>
 
-        <div id="peta" class="section">
+        <div id="peta dusun" class="section">
             <h2>Peta Dusun Blungkangan</h2>
             <div class="map-container">
                 <div class="map-placeholder">
                     <img src="PETA DUSUN BLUNGKANGAN.jpg" alt="peta_dusun_blungkangan">
                 </div>
                 <button class="download-btn" onclick="downloadMap()">
-                    📥 Download Peta (PDF)
+                    📥 Download Peta
+                </button>
+            </div>
+        </div>
+
+        <div id="peta tata guna" class="section">
+            <h2>Peta Tata Guna Lahan Dusun Blungkangan</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <img class="lahan" src="PETA TATA GUNA LAHAN DESA BAWUKAN.jpg" alt="peta_dusun_blungkangan">
+                </div>
+                <button class="download-btn" onclick="downloadMapLahan()">
+                    📥 Download Peta
                 </button>
             </div>
         </div>
@@ -507,35 +514,49 @@
                         <img src="DESA KEMENDES.jpg" alt="kerja bakti" class="carousel-image">
                         <div class="carousel-content">
                             <h3>Gotong Royong Pembersihan Lingkungan</h3>
-                            <p>Kegiatan rutin membersihkan lingkungan dusun yang dilakukan setiap bulan dengan partisipasi seluruh warga</p>
+                            <p>Kegiatan rutin membersihkan lingkungan dusun yang dilakukan setiap hari minggu dengan partisipasi seluruh ibu-ibu dusun Blungkangan</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="DESA KEMENDES.jpg" alt="kerja bakti" class="carousel-image">
+                        <img src="tpa.jpg" alt="kerja bakti" class="carousel-image">
                         <div class="carousel-content">
-                            <h3>Festival Budaya Tahunan</h3>
-                            <p>Perayaan budaya tradisional yang menampilkan seni tari, musik gamelan, dan kuliner khas daerah</p>
+                            <h3>Taman Pendidikan Al-Qur'an</h3>
+                            <p>Kegiatan rutin yang diadakan di masjid Al-Barokah setiap hari kamis dan minggu dengan partisipasi seluruh anak-anak dusun Blungkangan</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="DESA KEMENDES.jpg" alt="kerja bakti" class="carousel-image">
+                        <img src="pemuda.jpg" alt="kerja bakti" class="carousel-image">
                         <div class="carousel-content">
-                            <h3>Pelatihan Keterampilan Warga</h3>
-                            <p>Program pemberdayaan masyarakat melalui pelatihan kerajinan tangan dan kewirausahaan</p>
+                            <h3>Kumpul Karang Taruna</h3>
+                            <p>Kegiatan rutin yang diadakan setiap hari sabtu untuk membahas kegiatan pemuda disertai kegiatan arisan, dana sosial, dan jimpitan</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="DESA KEMENDES.jpg" alt="kerja bakti" class="carousel-image">
                         <div class="carousel-content">
                             <h3>Posyandu dan Kesehatan Masyarakat</h3>
-                            <p>Kegiatan pelayanan kesehatan rutin untuk ibu dan anak serta program imunisasi</p>
+                            <p>Kegiatan pelayanan kesehatan rutin setiap tanggal 10 untuk ibu dan anak serta program imunisasi</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="tabungan.jpg" alt="kerja bakti" class="carousel-image">
+                        <div class="carousel-content">
+                            <h3>Tabungan dan Arisan</h3>
+                            <p>Kegiatan rutin yang diadakan setiap malam jumat kliwon dan malam jumat legi untuk bapak-bapak serta hari minggu dan rabu untuk ibu-ibu</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="DESA KEMENDES.jpg" alt="kerja bakti" class="carousel-image">
                         <div class="carousel-content">
-                            <h3>Peringatan Hari Kemerdekaan</h3>
-                            <p>Berbagai lomba dan kegiatan dalam rangka memperingati HUT RI dengan meriah</p>
+                            <h3>Olahraga Pemuda</h3>
+                            <p>Latihan voli setiap sore yang diadakan oleh pemuda dusun Blungkangan (tim MVC).</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="senam.jpg" alt="kerja bakti" class="carousel-image">
+                        <div class="carousel-content">
+                            <h3>Senam Ibu-Ibu</h3>
+                            <p>Kegiatan rutin setiap hari Minggu sore yang diadakan di rumah warga</p>
                         </div>
                     </div>
                 </div>
@@ -548,6 +569,8 @@
                 <span class="indicator" onclick="currentSlide(3)"></span>
                 <span class="indicator" onclick="currentSlide(4)"></span>
                 <span class="indicator" onclick="currentSlide(5)"></span>
+                <span class="indicator" onclick="currentSlide(6)"></span>
+                <span class="indicator" onclick="currentSlide(7)"></span>
             </div>
         </div>
 
@@ -556,6 +579,13 @@
             <div class="contacts-grid">
                 <div class="contact-card" onclick="openWhatsApp('', 'Kepala Desa Bawukan')">
                     <h3>Kepala Desa Bawukan</h3>
+                    <p>Bapak Slamet</p>
+                    <p>📞 </p>
+                    <button class="whatsapp-btn">💬 Chat WhatsApp</button>
+                </div>
+
+                <div class="contact-card" onclick="openWhatsApp('', 'Kepala Desa Bawukan')">
+                    <h3>Lurah Desa Bawukan</h3>
                     <p>Bapak </p>
                     <p>📞 </p>
                     <button class="whatsapp-btn">💬 Chat WhatsApp</button>
@@ -563,7 +593,7 @@
                 
                 <div class="contact-card" onclick="openWhatsApp('+6285643732092', 'Sekretaris Desa')">
                     <h3>Sekretaris Desa</h3>
-                    <p>Bapak Gianto</p>
+                    <p>Bapak Giyanto</p>
                     <p>📞 +62856-4373-2092</p>
                     <button class="whatsapp-btn">💬 Chat WhatsApp</button>
                 </div>
@@ -575,12 +605,20 @@
                     <button class="whatsapp-btn">💬 Chat WhatsApp</button>
                 </div>
                 
+                <div class="contact-card" onclick="openWhatsApp('', 'RT 19')">
+                    <h3>Ketua RW 10</h3>
+                    <p>Bapak Sutardi</p>
+                    <p>📞 </p>
+                    <button class="whatsapp-btn">💬 Chat WhatsApp</button>
+                </div>
+                
                 <div class="contact-card" onclick="openWhatsApp('+6282137166968', 'RT 19')">
                     <h3>Ketua RT 19</h3>
                     <p>Bapak Rubio</p>
                     <p>📞 +62821-3716-6968</p>
                     <button class="whatsapp-btn">💬 Chat WhatsApp</button>
                 </div>
+
                 
                 <div class="contact-card" onclick="openWhatsApp('+6285328710869', 'RT 20')">
                     <h3>Ketua RT 20</h3>
@@ -593,6 +631,13 @@
                     <h3>Ketua Karang Taruna</h3>
                     <p>Saudara Susanto</p>
                     <p>📞 +62812-2838-5564</p>
+                    <button class="whatsapp-btn">💬 Chat WhatsApp</button>
+                </div>
+
+                <div class="contact-card" onclick="openWhatsApp('+6281575786271', 'Admin Website')">
+                    <h3>Admin Website</h3>
+                    <p>Saudara Syarif</p>
+                    <p>📞 +62815-7578-6271</p>
                     <button class="whatsapp-btn">💬 Chat WhatsApp</button>
                 </div>
             </div>
@@ -668,7 +713,44 @@
                     const url = URL.createObjectURL(blob);
                     const link = document.createElement('a');
                     link.href = url;
-                    link.download = 'peta_dusun_blungkangan.png';
+                    link.download = 'peta dusun blungkangan.png';
+                    
+                    // Trigger download
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    
+                    // Cleanup URL
+                    URL.revokeObjectURL(url);
+                }, 'image/png');
+                
+            } else {
+                alert('Peta tidak ditemukan. Pastikan file gambar sudah tersedia.');
+            }
+        }
+
+        function downloadMapLahan() {
+            const mapImage = document.querySelector('.map-placeholder .lahan');
+            
+            if (mapImage) {
+                // Buat canvas untuk convert image ke PDF
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Set ukuran canvas sama dengan gambar
+                canvas.width = mapImage.naturalWidth || mapImage.width;
+                canvas.height = mapImage.naturalHeight || mapImage.height;
+                
+                // Gambar image ke canvas
+                ctx.drawImage(mapImage, 0, 0);
+                
+                // Convert canvas ke blob
+                canvas.toBlob(function(blob) {
+                    // Buat URL download
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'peta tata guna lahan desa bawukan.png';
                     
                     // Trigger download
                     document.body.appendChild(link);
